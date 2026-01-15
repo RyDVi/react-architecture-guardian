@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run React Architecture Guardian Extension",
+      "type": "extensionHost",
+      "request": "launch",
+      "runtimeExecutable": "${execPath}",
+      "preLaunchTask": "dev: extension",
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}/vscode"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/vscode/out/**/*.js"
+      ]
+    }
+  ]
+}

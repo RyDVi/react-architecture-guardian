@@ -1,0 +1,58 @@
+{
+  "name": "react-architecture-guardian",
+  "displayName": "React Architecture Guardian",
+  "description": "Deterministic architecture analysis for React projects with clear explanations",
+  "version": "0.0.1",
+  "publisher": "your-name",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Linters",
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:typescriptreact",
+    "onLanguage:typescript",
+    "onLanguage:javascriptreact",
+    "onLanguage:javascript"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "rag.analyzeFile",
+        "title": "React Architecture Guardian: Analyze File"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "React Architecture Guardian",
+      "properties": {
+        "rag.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable React Architecture Guardian"
+        },
+        "rag.analyzeDelayMs": {
+          "type": "number",
+          "default": 400,
+          "minimum": 0,
+          "description": "Delay in milliseconds before running analysis after a change"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "openai": "^5.22.1",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0"
+  }
+}
